@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ main.cpp -o main'
+                bat 'g++ main.cpp -o main.exe'
             }
         }
-        stage('Test') {
+        stage('Run') {
             steps {
-                sh './main'
+                bat 'main.exe'
             }
         }
     }
